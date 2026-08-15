@@ -9,15 +9,15 @@ int main()
     
     int hash[27]={0};
     for(int i=0;i<s.length();i++){
-
+        hash[s[i]-'a']= hash[s[i]-'a']+1;
     }
     int q;
-    cout<<"How many characters do you waht to find:";
+    cout<<"How many characters do you want to find:";
     cin>>q;
     while(q--){
         char c;
         cin>>c;
-        cout<<""<<endl;
+        cout<<hash[c-'a']<<endl;
     }
     return 0;
 }

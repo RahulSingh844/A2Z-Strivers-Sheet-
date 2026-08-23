@@ -2,9 +2,9 @@
 using namespace std;
 void rightRotate(vector <int> &arr , int k){
     k=k%arr.size();
-    reverse(arr.begin()+(arr.size()-k)  ,   arr.end());
-    reverse(arr.begin()                 ,   arr.begin()+(arr.size()-k));
-    reverse(arr.begin()                 ,   arr.end());
+    reverse(arr.begin(),arr.end());
+    reverse(arr.begin(),arr.begin()+k);
+    reverse(arr.begin()+k,arr.end());
 }
 int main(){
     int n,k;
